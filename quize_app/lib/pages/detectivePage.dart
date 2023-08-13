@@ -13,6 +13,9 @@ class DetectivePage extends StatefulWidget {
 class _DetectivePageState extends State<DetectivePage> {
   @override
   Widget build(BuildContext context) {
+    var _height = MediaQuery.of(context).size.height;
+    var _width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -149,8 +152,8 @@ class _DetectivePageState extends State<DetectivePage> {
                           child: Padding(
                             padding: const EdgeInsets.all(10),
                             child: Container(
-                              height: 50,
-                              width: 430,
+                              height: _height * 0.07,
+                              width: _width * 0.8,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: const Color(0xff5869ff),
@@ -161,6 +164,7 @@ class _DetectivePageState extends State<DetectivePage> {
                                 style: TextStyle(
                                   fontSize: 20,
                                   color: Colors.white,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               )),
                             ),
